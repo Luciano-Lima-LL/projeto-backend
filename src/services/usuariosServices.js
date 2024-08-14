@@ -13,3 +13,4 @@ app.use('/v1/user', routerUser);
 app.listen(3000, () => {
   console.log('Server running at http://localhost:3000/');
 });
+

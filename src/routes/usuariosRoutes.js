@@ -15,9 +15,11 @@ router.get('/:id', (req, res) => {
   if (user) {
     res.json(user);
   } else {
-    res.status(404).json({ message: 'User not found' });
-  }
+    res.status(404).json({ message: 'deu certo não pai' });
+  } 
 });
+
+module.exports = router;
 
 router.post('/', (req, res) => {
   const { firstname, surname, email, password, confirmPassword } = req.body;
@@ -36,7 +38,7 @@ router.post('/', (req, res) => {
     surname,
     email
   };
-  
+
   users.push(newUser);
   res.status(201).json(newUser);
 });
@@ -81,4 +83,4 @@ router.delete('/:id', checkToken, (req, res) => {
   res.status(204).send();
 });
 
-module.exports = router;
+
